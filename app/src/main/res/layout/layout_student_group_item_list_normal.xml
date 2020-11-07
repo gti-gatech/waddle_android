@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8dp"
+    android:layout_marginBottom="@dimen/_8dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStudentName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:text="Andy Warn"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGrade"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_12sp"
+            android:text="Grade: 3rd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewStudentName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStop"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingBottom="@dimen/_15dp"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_12sp"
+            android:text="Default Stop: Crocking lkllk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGrade" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_15dp"
+    android:layout_marginTop="@dimen/_10dp"
+    android:layout_marginEnd="@dimen/_15sp"
+    android:layout_marginBottom="@dimen/_5dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_5dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.appzoro.milton.utility.CircleImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:padding="@dimen/_5dp"
+            android:layout_margin="@dimen/_5dp"
+            android:src="@drawable/ic_user_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/mLayout"
+            android:paddingStart="@dimen/_5dp"
+            android:paddingEnd="@dimen/_5dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/imageViewProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewTitle"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:gravity="start"
+            android:paddingTop="@dimen/_15dp"
+            android:textColor="@color/colorTextOpacity_80"
+            android:text="Abc"
+            android:textSize="@dimen/_14sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewLastWalk"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:gravity="start"
+            android:text="Abc"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginBottom="@dimen/_2dp"
+            android:textColor="@color/colorTextOpacity_40"
+            android:textSize="@dimen/_11sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStudentCount"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="@dimen/_15dp"
+            android:text="Abc dZddasfd "
+            android:textColor="@color/colorTextOpacity_75"
+            android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mImageView"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

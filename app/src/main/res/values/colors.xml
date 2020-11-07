@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F9A26C</color>
+    <color name="colorPrimaryDark">#F26627</color>
+    <color name="colorAccent">#325D79</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightGrey">#efefef</color>
+    <color name="colorText">#161F3D</color>
+    <color name="colorTextOpacity_40">#66161F3D</color>
+    <color name="colorTextOpacity_60">#99161F3D</color>
+    <color name="colorTextOpacity_80">#CC161F3D</color>
+    <color name="colorTextOpacity_70">#B3161F3D</color>
+    <color name="colorTextOpacity_75">#BF161F3D</color>
+    <color name="colorTextOpacity_30">#4D161F3D</color>
+    <color name="colorLightBlue">#9BD7D1</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorIcons">#d9d9d9</color>
+    <color name="colorNotBack">#CCD9D9D9</color>
+    <color name="lightBackColor">#F1F1F1</color>
+    <color name="colorForgotLabel">#333333</color>
+    <color name="colorForInputHint">#40161f3d</color>
+    <color name="colorLineSeparator">#c5c5c5</color>
+    <color name="colorLineSeparatorEditProfile">#707070</color>
+    <color name="colorSkip">#707070</color>
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="dialog_trans">#80313131</color>
+<!--    <color name="colorlightGreyBlue">#9ad6d0</color>-->
+    <color name="colorRippleOnSwipe">#4DF9A26C</color>
+    <color name="colorNotificationCard">#f9a26c</color>
+
+    <color name="colorGroupImageBottom">#9bd7d1</color>
+
+    <color name="colorTextTermsConditions">#8d8d8d</color>
+    <color name="colorWarmGrey">#797979</color>
+
+    <color name="roboto_calendar_selected_day_font">#FFFFFF</color>
+    <color name="roboto_calendar_normal_day_font">#212b36</color>
+<!--    <color name="roboto_calendar_day_of_the_month_font">#4F4F4F</color>-->
+    <color name="roboto_calendar_circle_1">@color/colorPrimaryDark</color>
+    <color name="roboto_calendar_circle_2">#55c6da</color>
+
+<!--    <color name="color_calendar_weekend">#EFEEEE</color>-->
+<!--    <color name="color_calendar_weekend">#EFEEEE</color>-->
+<!--    <color name="color_calendar_weekend">#d9d9d9</color>-->
+    <color name="color_calendar_weekend">#4D212B36</color>
+    <color name="color_calendar_week_name">#333333</color>
+    <color name="colorGreen">#0db144</color>
+
+
+    <color name="colorBg">#efeeee</color>
+    <color name="colorBgWebView">#ECEDF0</color>
+    <color name="colorBgMessageEdit">#DFDFE1</color>
+
+</resources>

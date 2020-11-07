@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="searchViewModel"
+            type="com.appzoro.milton.ui.view.activity.onboarding.searchgroup.SearchGroupViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorIcons"
+        tools:context=".ui.view.activity.onboarding.searchgroup.SearchGroupActivity">
+
+        <include
+            android:id="@+id/layoutHeader"
+            layout="@layout/layout_header_with_icons" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutHeader">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchView"
+                style="@style/inputText"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/_5dp"
+                android:hint="@string/search_default_msg"
+                android:textColor="@color/colorTextOpacity_80"
+                android:paddingStart="@dimen/_15dp"
+                android:paddingEnd="@dimen/_10dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewGroupList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewSearch"
+            tools:listitem="@layout/group_list_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.appzoro.milton.ui.view.fragment.dashboardhome.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_trips"
+        android:name="com.appzoro.milton.ui.view.activity.dashboard.navtrips.TripsActivity"
+        android:label="@string/trips"
+        tools:layout="@layout/activity_trips" />
+
+    <fragment
+        android:id="@+id/nav_tips"
+        android:name="com.appzoro.milton.ui.view.activity.dashboard.navtips.TipsActivity"
+        android:label="@string/tips"
+        tools:layout="@layout/fragment_tips" />
+    <fragment
+        android:id="@+id/nav_term"
+        android:name="com.appzoro.milton.ui.view.activity.dashboard.navtermsorprivacy.TermsPrivacyActivity"
+        android:label="@string/term_condition_title"
+        tools:layout="@layout/activity_terms_privacy" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.appzoro.milton.ui.view.activity.dashboard.navabout.AboutActivity"
+        android:label="@string/privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+</navigation>

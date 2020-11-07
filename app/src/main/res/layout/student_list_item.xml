@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_20dp"
+    android:layout_marginTop="@dimen/_15dp"
+    android:layout_marginEnd="@dimen/_20sp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_18dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:text="Student Name"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSchoolName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_2dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingBottom="@dimen/_18dp"
+            android:text="Elementary"
+            android:textColor="@color/colorTextOpacity_75"
+            android:textSize="@dimen/_11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_uncheck"
+            app:layout_constraintBottom_toBottomOf="@id/textViewSchoolName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toEndOf="@id/textViewName"
+            app:layout_constraintTop_toTopOf="@id/textViewName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

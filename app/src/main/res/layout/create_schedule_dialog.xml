@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_280dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5dp"
+    android:background="@drawable/white_background"
+    android:padding="@dimen/_10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewCross"
+        android:layout_marginBottom="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toEndOf="@id/textViewTitleRepeat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitleRepeat"
+        style="@style/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="Repeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitleRepeat">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:entries="@array/repeat_array"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingTop="@dimen/_5dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:id="@+id/spinnerRepeat"
+            android:paddingBottom="@dimen/_5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitleRepeat" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewRepeatOnTitle"
+        style="@style/labelText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="Repeat On"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/horizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepeatOnTitle">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:weightSum="1"
+            android:id="@+id/linearLayoutParent"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:padding="@dimen/_1dp"
+            android:background="@drawable/day_out_line"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewMon"
+                style="@style/labelText"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:gravity="center"
+                android:text="Mon"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLineSeparator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewTue"
+                style="@style/labelText"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:text="Tue"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLineSeparator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewWed"
+                style="@style/labelText"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:text="Wed"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLineSeparator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewThu"
+                style="@style/labelText"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:text="Thu"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLineSeparator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFri"
+                style="@style/labelText"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:text="Fri"
+                android:textColor="@color/colorPrimary" />
+
+            <!--<View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLineSeparator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewSat"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:text="Sat"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLineSeparator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewSun"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:text="Sun"
+                android:textColor="@color/colorPrimary"/>-->
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/button"
+        android:id="@+id/buttonDone"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScroll" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

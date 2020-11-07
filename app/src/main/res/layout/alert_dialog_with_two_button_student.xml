@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayout"
+    android:layout_width="@dimen/_280dp"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTransparent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:background="@color/colorWhite"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/white_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10dp"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_10dp"
+                android:src="@drawable/ic_signin_logo"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent=".30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".30" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewMessage"
+                style="@style/labelText"
+                android:layout_marginTop="@dimen/_20dp"
+                android:padding="@dimen/_10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/logout_msg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewLogo"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonYes"
+                style="@style/button"
+                android:layout_width="@dimen/_80dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="@string/yes"
+                android:textAllCaps="true"
+                app:cornerRadius="@dimen/_20dp"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingBottom="@dimen/_5dp"
+                android:paddingEnd="@dimen/_10dp"
+                android:paddingTop="@dimen/_5dp"
+                android:textSize="@dimen/_10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/buttonNo"
+                app:layout_constraintTop_toBottomOf="@id/textViewMessage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonNo"
+                style="@style/button"
+                android:layout_width="@dimen/_80dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:text="@string/no"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:strokeWidth="1dp"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingBottom="@dimen/_5dp"
+                android:paddingEnd="@dimen/_10dp"
+                android:paddingTop="@dimen/_5dp"
+                android:textSize="@dimen/_10sp"
+                android:backgroundTint="@color/colorWhite"
+                app:cornerRadius="@dimen/_20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buttonYes"
+                app:layout_constraintTop_toBottomOf="@id/textViewMessage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

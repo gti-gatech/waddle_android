@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_15dp"
+    android:layout_marginTop="@dimen/_8dp"
+    android:layout_marginEnd="@dimen/_15dp"
+    android:layout_marginBottom="@dimen/_8dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStudentName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingBottom="@dimen/_3dp"
+            android:text="@string/supervisor"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_12sp"
+            android:drawablePadding="@dimen/_4dp"
+            android:drawableStart="@drawable/ic_star_orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewDate"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_3dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingBottom="@dimen/_10dp"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewStudentName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewStop"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSuperVisorName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_3dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingBottom="@dimen/_15dp"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewStop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none" >
+       <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_nav_profile"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_trips"
+            android:icon="@drawable/ic_nav_trips"
+            android:title="@string/trips"
+            />
+        <item
+            android:id="@+id/nav_term"
+            android:icon="@drawable/ic_nav_trips"
+            android:title="@string/term_condition_title"/>
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_nav_privacypolicy"
+            android:title="@string/privacy_policy" />
+        <item
+            android:id="@+id/nav_tips"
+            android:icon="@drawable/ic_nav_tips"
+            android:title="@string/tips"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_nav_about"
+            android:title="@string/about"/>
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_nav_logout"
+            android:title="@string/logout"/>
+
+    </group>
+</menu>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="groupDetailsViewModel"
+            type="com.appzoro.milton.ui.view.activity.group_details.GroupDetailsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.view.activity.group_details.GroupDetailsActivity">
+
+        <LinearLayout
+            android:background="@color/colorBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivGroupImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/dialog_trans"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="H,25:14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/mProgress"
+                    style="@android:style/Widget.Holo.Light.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:indeterminateDrawable="@drawable/loading_spinner"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivGroupImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivGroupImage" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingStart="@dimen/_10dp"
+                        android:paddingEnd="@dimen/_10dp"
+                        android:src="@drawable/ic_back_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEditGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:padding="@dimen/_3dp"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/colorWhite"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/colorWhite" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSave"
+                        style="@style/labelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40dp"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_15dp"
+                        android:paddingEnd="@dimen/_10dp"
+                        android:text="@string/save"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_13sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvGroupName"
+                    style="@style/labelText"
+                    android:enabled="false"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingEnd="@dimen/_10dp"
+                    android:paddingBottom="@dimen/_10dp"
+                    android:maxLength="25"
+                    android:text="@={groupDetailsViewModel.groupName}"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvGroupDate"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvGroupDate"
+                    style="@style/labelText"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingEnd="@dimen/_1dp"
+                    android:paddingBottom="@dimen/_10dp"
+                    android:text="@string/supervise"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_10sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/mTextView"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivEditImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:padding="@dimen/_8dp"
+                    android:src="@drawable/ic_edit_blue_circle"
+                    android:tint="@color/colorWhite"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/mTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:tint="@color/colorWhite" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mTextView"
+                    style="@style/labelText"
+                    android:background="@color/colorGroupImageBottom"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_10dp"
+                    android:text="@string/supervise"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivGroupImage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/mTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/colorTransparent"
+                app:tabGravity="fill"
+                app:tabIndicator="@null"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorWhite"
+                app:tabTextAppearance="@style/tabWidget"
+                app:tabTextColor="@color/colorAccent" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/mViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:paddingBottom="@dimen/_5dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

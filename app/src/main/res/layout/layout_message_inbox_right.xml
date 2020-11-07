@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayoutRight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="@dimen/_6dp"
+        app:cardElevation="0dp"
+        app:contentPadding="0dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMessage"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/_10dp"
+            android:text="@string/notification_message_demo"
+            android:textColor="@color/colorWhite" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDate"
+        style="@style/labelBottomText"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_7dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:gravity="center_vertical|start"
+        android:text="@string/just_now"
+        android:textColor="@color/colorTextOpacity_70"
+        android:textSize="@dimen/_12sp" />
+
+</LinearLayout>
+

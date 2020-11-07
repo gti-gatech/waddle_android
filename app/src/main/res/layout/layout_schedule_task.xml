@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15dp"
+    android:gravity="center_horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTime"
+        style="@style/labelText_14_Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/_20dp"
+        android:text="4:00 PM"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSupervisorStar"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:text="@string/supervisor"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sp"
+            android:drawablePadding="@dimen/_4dp"
+            android:drawableStart="@drawable/ic_star_orange"
+            android:paddingBottom="@dimen/_2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvMessage"
+            style="@style/labelText_14_Medium"
+            android:layout_width="wrap_content"
+            android:text="The ABC Street Route ABC Street Route" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStudent"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:text="Student: Andwy Join"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSupervisor"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:text="Supervisor: Royan Join D"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvStudent" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEditSchedule"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="@dimen/_10dp"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/ic_menu_dots" />
+
+</LinearLayout>

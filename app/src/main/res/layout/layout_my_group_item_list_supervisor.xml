@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8dp"
+    android:layout_marginBottom="@dimen/_8dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_5dp"
+            android:paddingBottom="@dimen/_15dp"
+            android:paddingTop="@dimen/_10dp"
+            android:background="@color/colorWhite"
+            android:layout_gravity="start">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_user_profile"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvGroupName"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:text="Mlk Group"
+                android:textColor="@color/colorTextOpacity_80"
+                android:textSize="@dimen/_14sp"
+                android:paddingTop="@dimen/_10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSupervisor"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:drawableStart="@drawable/ic_star_orange"
+                android:drawablePadding="@dimen/_4dp"
+                android:text="@string/supervisor"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGroupName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDate"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:text="Upcoming date: 05/20/2020"
+                android:textColor="@color/colorTextOpacity_75"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSupervisor" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTotalTrips"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:text="Total Trips Walked: 5"
+                android:textColor="@color/colorTextOpacity_70"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvStudent"
+                style="@style/labelText"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_10dp"
+                android:text="Student: 5"
+                android:textColor="@color/colorTextOpacity_70"
+                android:textSize="@dimen/_11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTotalTrips" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEditSchedule"
+            android:layout_width="@dimen/_25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="@dimen/_15dp"
+            android:src="@drawable/ic_menu_dots" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

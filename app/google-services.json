@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "88825992052",
+    "firebase_url": "https://miltonwalking-app.firebaseio.com",
+    "project_id": "miltonwalking-app",
+    "storage_bucket": "miltonwalking-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88825992052:android:e7ff62b8ba65d3a9f11221",
+        "android_client_info": {
+          "package_name": "com.appzoro.milton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88825992052-0ggrlrrd1bmamtmqsa0m8h66n8ce4li4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZvNhiHHeNrRp1imoyHWlxxqsHbgBpUyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88825992052-0ggrlrrd1bmamtmqsa0m8h66n8ce4li4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

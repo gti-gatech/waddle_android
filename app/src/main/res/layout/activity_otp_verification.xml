@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="otpViewModel"
+            type="com.appzoro.milton.ui.view.activity.otpverification.OtpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.activity.otpverification.OtpVerificationActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10dp"
+            android:src="@drawable/ic_cancel_update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewOtpTitle"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_60dp"
+            android:text="@string/enter_your_otp"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageCancel" />
+
+        <com.appzoro.milton.ui.view.otp_view.OtpView
+            android:id="@+id/mOtpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_40dp"
+            android:gravity="center"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/textViewOtpTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewNotGettingOtp"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40dp"
+            android:text="@string/i_didn_t_getting_the_otp"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mOtpPassword" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewResendOtp"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/resend_otp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewNotGettingOtp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerify"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:paddingStart="@dimen/_20dp"
+            android:paddingEnd="@dimen/_20dp"
+            android:text="Verify"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sp"
+            app:cornerRadius="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewResendOtp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

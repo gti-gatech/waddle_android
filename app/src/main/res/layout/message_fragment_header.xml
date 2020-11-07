@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewHamburger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/_10dp"
+        app:srcCompat="@drawable/ic_hambuger_menu" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        style="@style/labelText"
+        android:text="INBOX"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:padding="@dimen/_10dp"
+        app:srcCompat="@drawable/ic_notifications" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

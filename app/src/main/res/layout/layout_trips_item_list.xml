@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8dp"
+    android:layout_marginBottom="@dimen/_8dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_15dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGroupDate"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:text="Date: 06/07/2020"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSupervisorStar"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:drawableStart="@drawable/ic_star_orange"
+            android:drawablePadding="@dimen/_4dp"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingTop="@dimen/_1sp"
+            android:paddingBottom="@dimen/_1sp"
+            android:text="@string/supervisor"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGroupDate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStudent"
+            style="@style/labelText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingTop="@dimen/_1sp"
+            android:paddingBottom="@dimen/_1sp"
+            android:text="Student: Crocking "
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSupervisorStar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPickupStop"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingTop="@dimen/_1sp"
+            android:paddingBottom="@dimen/_1sp"
+            android:text="Pickup Stop: Crocking lkllk"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStudent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGroupName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:text="The Abc Area"
+            android:paddingTop="@dimen/_1sp"
+            android:paddingBottom="@dimen/_1sp"
+            android:textSize="@dimen/_13sp"
+            android:textColor="@color/colorTextOpacity_70"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPickupStop" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSupervisorName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingEnd="@dimen/_3dp"
+            android:paddingTop="@dimen/_1sp"
+            android:text="Supervisor: Join Smith"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGroupName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

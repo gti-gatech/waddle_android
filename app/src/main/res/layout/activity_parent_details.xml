@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="updateParentViewModel"
+            type="com.appzoro.milton.ui.view.activity.parent_details.ParentDetailsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.activity.parent_details.ParentDetailsActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layoutHeader"
+                layout="@layout/layout_header_with_icons" />
+
+            <ImageView
+                android:id="@+id/tvSave"
+                style="@style/headerTitle"
+                android:onClick="@{()->updateParentViewModel.callApiForUpdateProfile()}"
+                android:paddingStart="@dimen/_10dp"
+                android:paddingEnd="@dimen/_10dp"
+                android:layout_height="?actionBarSize"
+                android:visibility="gone"
+                android:src="@drawable/ic_save_"
+                android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="@dimen/_3dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:padding="@dimen/_3dp"
+                android:visibility="visible"
+                android:src="@drawable/ic_edit_blue_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_15dp"
+                android:src="@drawable/ic_user_profile"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent=".35"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".35" />
+
+            <ProgressBar
+                android:id="@+id/mProgress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivCamera"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCamera"
+                style="@android:style/Widget.Holo.Light.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/loading_spinner"
+                android:visibility="gone" />
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEditPicture"
+                android:visibility="gone"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_edit_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCamera"
+                app:layout_constraintRight_toRightOf="@+id/ivCamera" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_35dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:background="@drawable/edit_text_bottom_border_profile"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivCamera">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/labelText"
+                    android:text="@string/full_name" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    style="@style/inputText"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="@string/full_name"
+                    android:textColor="@color/colorTextOpacity_60"
+                    android:inputType="textCapSentences"
+                    android:paddingBottom="@dimen/_3dp"
+                    android:maxLength="25"
+                    android:textSize="@dimen/_12sp"
+                    android:text="@={updateParentViewModel.fullName}" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:background="@drawable/edit_text_bottom_border_profile"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutFullName">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/labelText"
+                    android:text="@string/email_title" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    style="@style/inputText"
+                    android:enabled="false"
+                    android:background="@null"
+                    android:hint="@string/email_title"
+                    android:textColor="@color/colorTextOpacity_60"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="@dimen/_3dp"
+                    android:textSize="@dimen/_12sp"
+                    android:text="@={updateParentViewModel.inputEmail}" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:background="@drawable/edit_text_bottom_border_profile"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutEmail">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/labelText"
+                    android:text="@string/phone_number" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    style="@style/inputText"
+                    android:background="@null"
+                    android:inputType="phone"
+                    android:enabled="false"
+                    android:textColor="@color/colorTextOpacity_60"
+                    android:hint="@string/phone_number"
+                    android:textSize="@dimen/_12sp"
+                    android:paddingBottom="@dimen/_3dp"
+                    android:text="@={updateParentViewModel.phone}" />
+
+                <!--<com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneNumber"
+                    style="@style/inputText"
+                    android:background="@null"
+                    android:hint="@string/andy_wam_dummy_phone"
+                    android:inputType="text"
+                    android:maxLength="14"
+                    android:enabled="false"
+                    android:paddingBottom="@dimen/_3dp"
+                    android:text="@={updateParentViewModel.phoneNumber}" />-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:background="@drawable/edit_text_bottom_border_profile"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutPhone">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/labelText"
+                    android:text="@string/address" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAddress"
+                    style="@style/inputText"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:hint="@string/address"
+                    android:textSize="@dimen/_12sp"
+                    android:textColor="@color/colorTextOpacity_60"
+                    android:paddingBottom="@dimen/_3dp"
+                    android:text="@={updateParentViewModel.address}" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layoutDefaultStop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:background="@drawable/edit_text_bottom_border_profile"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutAddress">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/labelText"
+                    android:paddingBottom="@dimen/_3dp"
+                    android:text="@string/select_default_stop"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDefaultStop"
+                    style="@style/inputText"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/ic_dropdown"
+                    android:hint="@string/select_default_stop"
+                    android:text="@={updateParentViewModel.defaultStopName}"
+                    android:paddingBottom="@dimen/_3dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

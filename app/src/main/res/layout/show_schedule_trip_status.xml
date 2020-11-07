@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_background"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_10dp"
+    android:paddingBottom="@dimen/_15dp">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_5dp"
+        android:text="@string/scheduled_trips"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutSupervising"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSupervising"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5dp"
+            style="@style/labelText"
+            android:text="@string/supervising"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSuperviseCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/labelText"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSupervisedAlready"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSupervising">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSupervisedAlready"
+            android:layout_width="0dp"
+            style="@style/labelText"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_10dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="@dimen/_5dp"
+            android:text="Already Supervised"
+            android:textColor="@color/colorTextOpacity_70"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewSupervisedAlreadyCounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5dp"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_12sp"
+            android:layout_marginEnd="@dimen/_5dp"
+            style="@style/labelText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOkay"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:paddingStart="@dimen/_15dp"
+        android:paddingTop="@dimen/_5dp"
+        android:paddingEnd="@dimen/_15dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:text="@string/ok"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_10sp"
+        app:cornerRadius="@dimen/_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSupervisedAlready" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

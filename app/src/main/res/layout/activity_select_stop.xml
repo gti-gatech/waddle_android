@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="stopModel"
+            type="com.appzoro.milton.ui.view.activity.selectstop.SelectStopViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.activity.selectstop.SelectStopActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/layout_header" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewStop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:clipToPadding="false"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_10dp"
+                app:cardElevation="@dimen/_2dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5dp"
+                        android:layout_marginEnd="@dimen/_5dp"
+                        android:layout_weight=".65">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textViewStopTitle"
+                            style="@style/labelText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:padding="@dimen/_5dp"
+                            android:textSize="@dimen/_10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textViewTime"
+                            style="@style/labelText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/helvetica_medium"
+                            android:padding="@dimen/_5dp"
+                            android:textSize="@dimen/_10sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textViewStopTitle" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonConfirmStop"
+                        style="@style/button"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_marginEnd="@dimen/_5dp"
+                        android:layout_weight=".35"
+                        android:text="@string/confirm_stop"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_8sp"
+                        app:cornerRadius="@dimen/_20dp"
+                        app:layout_constraintStart_toEndOf="@id/textViewTitle"
+                        app:layout_constraintTop_toTopOf="@id/textViewTitle" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="forgotViewModel"
+            type="com.appzoro.milton.ui.view.activity.forgotpassword.ForgotViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.activity.forgotpassword.ForgotActivity">
+
+        <include
+            android:id="@+id/layoutTitle"
+            layout="@layout/layout_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:forgot="@{forgotViewModel}" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50dp"
+            android:src="@drawable/ic_forgot_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewMsgLabel"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTitle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewMsgLabel"
+            style="@style/labelText"
+            android:layout_marginTop="@dimen/_50dp"
+            android:gravity="center"
+            android:padding="@dimen/_10dp"
+            android:text="@string/forgot_password_msg_label"
+            android:textColor="@color/colorForgotLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewPassword" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12dp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMsgLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/inputText"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_email"
+                android:id="@+id/editTextEmail"
+                android:drawablePadding="@dimen/_10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="@string/email"
+                android:text="@={forgotViewModel.inputEmail}"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/colorLineSeparator" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSend"
+            style="@style/button"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_30dp"
+            android:onClick="@{()->forgotViewModel.callApiForSentEmail()}"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutEmail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

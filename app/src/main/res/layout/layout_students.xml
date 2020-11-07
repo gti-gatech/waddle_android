@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10dp"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/_10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:background="@drawable/bg_student_gradient_drawable"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"/>
+
+        <!--<LinearLayout
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55dp"/>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_55dp"
+            android:layout_height="@dimen/_47dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_30dp"
+            android:src="@drawable/ic_user_profile"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStudentName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingTop="@dimen/_10dp"
+            android:text="Mlk Group"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSchoolName"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingTop="@dimen/_5dp"
+            android:text="Mlk Group"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_11sp"
+            android:paddingBottom="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStudentName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvClass"
+            style="@style/labelText"
+            android:layout_width="wrap_content"
+            android:paddingBottom="@dimen/_15dp"
+            android:text="Mlk Group"
+            android:visibility="gone"
+            android:textColor="@color/colorTextOpacity_80"
+            android:textSize="@dimen/_11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSchoolName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

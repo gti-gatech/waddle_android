@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="addStudentViewModel"
+            type="com.appzoro.milton.ui.view.activity.onboarding.addstudent.AddStudentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.activity.onboarding.addstudent.AddStudentActivity">
+
+        <include
+            android:id="@+id/layoutHeader"
+            layout="@layout/layout_header_with_icons" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="@drawable/edit_text_bottom_border"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutHeader">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/labelText"
+                android:paddingBottom="@dimen/_3dp"
+                android:text="@string/student_name_title" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTexStudentName"
+                style="@style/inputText"
+                android:background="@null"
+                android:hint="@string/student_name_title"
+                android:maxLength="25"
+                android:text="@={addStudentViewModel.inputStudentName}"
+                android:inputType="textCapSentences"
+                android:paddingBottom="@dimen/_3dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutParentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="@drawable/edit_text_bottom_border"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutStudentName">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/labelText"
+                android:paddingBottom="@dimen/_3dp"
+                android:text="@string/parent_name_title" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTexParentName"
+                style="@style/inputText"
+                android:background="@null"
+                android:hint="@string/andy_wam_dummy_name"
+                android:text="@={addStudentViewModel.inputParentName}"
+                android:inputType="textCapSentences"
+                android:paddingBottom="@dimen/_3dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="@drawable/edit_text_bottom_border"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutParentName">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/labelText"
+                android:paddingBottom="@dimen/_3dp"
+                android:text="@string/email_title" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                style="@style/inputText"
+                android:background="@null"
+                android:hint="@string/email_title"
+                android:text="@={addStudentViewModel.inputEmail}"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="@dimen/_3dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutSchoolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="@drawable/edit_text_bottom_border"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutEmail">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/labelText"
+                android:paddingBottom="@dimen/_3dp"
+                android:text="@string/school_name_title" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSchoolName"
+                style="@style/inputText"
+                android:background="@null"
+                android:hint="@string/school_name_title"
+                android:text="@={addStudentViewModel.inputSchoolName}"
+                android:inputType="text"
+                android:paddingBottom="@dimen/_3dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutStudentGrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:background="@drawable/edit_text_bottom_border"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutSchoolName">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/labelText"
+                android:paddingBottom="@dimen/_3dp"
+                android:text="@string/student_grade_title" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextStudentGrade"
+                style="@style/inputText"
+                android:background="@null"
+                android:hint="@string/student_grade_title"
+                android:text="@={addStudentViewModel.inputStudentGrade}"
+                android:inputType="text"
+                android:paddingBottom="@dimen/_3dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/button"
+            android:id="@+id/mSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->addStudentViewModel.addStudent()}"
+            android:paddingStart="@dimen/_20dp"
+            android:paddingEnd="@dimen/_20dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutStudentGrade"
+            app:layout_constraintVertical_bias="0.442" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
